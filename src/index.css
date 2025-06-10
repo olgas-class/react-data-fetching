@@ -1,0 +1,13 @@
+.card-status::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  margin-right: 10px;
+}
+
+.card-status.success::before {
+  background-color: greenyellow;
+}
