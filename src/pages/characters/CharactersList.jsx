@@ -58,6 +58,7 @@ const CharactersList = () => {
 
                   {new Array(totalPages).fill(null).map((elem, index) => (
                     <li
+                      key={index}
                       className={`page-item ${
                         currentPage === index + 1 && "active"
                       }`}

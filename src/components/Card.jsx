@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Card = ({ character }) => {
   const { image, name, status, species, id } = character;
   return (
@@ -23,6 +25,9 @@ const Card = ({ character }) => {
             <p className="card-text">
               <small className="text-body-secondary">{species}</small>
             </p>
+            <Link className="btn btn-warning" to={`/personaggi/${id}`}>
+              Dettagli
+            </Link>
           </div>
         </div>
       </div>

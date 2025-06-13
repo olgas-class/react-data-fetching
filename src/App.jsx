@@ -3,6 +3,9 @@ import Home from "./pages/Home";
 import CharactersList from "./pages/characters/CharactersList";
 import GuestLayout from "./layouts/GuestLayout";
 import Page404 from "./pages/Page404";
+import ShowCaracter from "./pages/characters/ShowCharacter";
+import EpisodesList from "./pages/episodes/EpisodesList";
+import ShowEpisode from "./pages/episodes/ShowEpisode";
 
 function App() {
   return (
@@ -10,7 +13,14 @@ function App() {
       <Routes>
         <Route element={<GuestLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/personaggi" element={<CharactersList />} />
+          <Route path="/personaggi">
+            <Route path="" element={<CharactersList />} />
+            <Route path=":id" element={<ShowCaracter />} />
+          </Route>
+          <Route path="/episodi">
+            <Route path="" element={<EpisodesList />} />
+            <Route path=":id" element={<ShowEpisode />} />
+          </Route>
         </Route>
         <Route path="*" element={<Page404 />} />
       </Routes>

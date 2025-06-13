@@ -10,6 +10,10 @@ const AppHeader = () => {
       title: "Personaggi",
       url: "/personaggi",
     },
+    {
+      title: "Episodi",
+      url: "/episodi",
+    },
   ];
 
   return (
@@ -38,6 +42,7 @@ const AppHeader = () => {
                     className="nav-link"
                     aria-current="page"
                     to={curLink.url}
+                    end
                   >
                     {curLink.title}
                   </NavLink>
